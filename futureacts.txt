@@ -1,0 +1,7 @@
+Implementar mudanças de themes.
+
+Implementar mais cards para o sistema.
+
+Implementar implementar ação de pesquisa.
+
+Implementar modelo de IA e filtro de palavras.
