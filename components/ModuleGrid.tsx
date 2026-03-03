@@ -1,20 +1,27 @@
+"use client"
+
 import ModuleCard from "./ModuleCard"
-import { modules, type Module } from "@/lib/modules"
+import { modules } from "@/lib/modules"
+
 type Props = {
-  modules: Module[]
-  onExecute: (query: string) => void
+  target: string
 }
-export default function ModuleGrid() {
+
+export default function ModuleGrid({ target }: Props) {
   return (
     <div className="grid md:grid-cols-3 gap-6 mt-12">
-      {modules.map((mod) => (
-        <ModuleCard
-          key={mod.id}
-          title={mod.title}
-          description={mod.description}
-          category={mod.category}
-        />
-      ))}
+      {modules.map((mod) =>
+        mod.dorks.map((dork) => (
+          <ModuleCard
+            key={dork.id}
+            title={mod.title}
+            description={mod.description}
+            category={mod.category}
+            query={dork.query}
+            target={target}
+          />
+        ))
+      )}
     </div>
   )
 }

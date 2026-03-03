@@ -22,7 +22,7 @@ export const modules: Module[] = [
     id: "1",
     title: "Directory Listing",
     description: "Find exposed directory indexes",
-    category: "RECON",
+    category: "BROWSER",
     dorks: [
       {
         id: "1-1",
@@ -35,7 +35,7 @@ export const modules: Module[] = [
     id: "2",
     title: "Exposed Configs",
     description: "Find public configuration files",
-    category: "FILES",
+    category: "BROWSER",
     dorks: [
       {
         id: "2-1",
@@ -48,7 +48,7 @@ export const modules: Module[] = [
     id: "3",
     title: "DB Files",
     description: "Find public database files",
-    category: "FILES",
+    category: "BROWSER",
     dorks: [
       {
         id: "3-1",
@@ -61,7 +61,7 @@ export const modules: Module[] = [
     id: "4",
     title: "Log Files",
     description: "Find public log files",
-    category: "FILES",
+    category: "BROWSER",
     dorks: [
       {
         id: "4-1",
@@ -74,7 +74,7 @@ export const modules: Module[] = [
     id: "5",
     title: "Backup Files",
     description: "Find public backup files",
-    category: "FILES",
+    category: "BROWSER",
     dorks: [
       {
         id: "5-1",
@@ -87,12 +87,51 @@ export const modules: Module[] = [
     id: "6",
     title: "Login Pages",
     description: "Find login portals",
-    category: "RECON",
+    category: "BROWSER",
     dorks: [
       {
         id: "6-1",
         label: "Login Pages",
         query: 'site:(site) inurl:login | inurl:signin | inurl:auth | inurl:account',
+      },
+    ],
+  },
+  {
+    id: "7",
+    title: "SQL ERRORs",
+    description: "Find SQL error messages",
+    category: "BROWSER",
+    dorks: [
+      {
+        id: "7-1",
+        label: "SQL Errors",
+        query: 'site:(site) intext:"sql syntax near" | intext:"sql syntax error" | intext:"syntax error has occurred" | intext:"incorrect syntax near" | intext:"unexpected end of SQL command" | intext:"Warning: mysql_connect()" | intext:"Warning: mysql_query()" | intext:"Warning: pg_connect()" | intext:"Warning: pg_query()"',
+      },
+    ],
+  },
+  {
+    id: "8",
+    title: "Public Documents",
+    description: "Find publicly accessible documents",
+    category: "BROWSER",
+    dorks: [
+      {
+        id: "8-1",
+        label: "Public Docs",
+        query: 'site:(site) ext:doc | ext:docx | ext:ppt | ext:pptx | ext:xls | ext:xlsx | ext:pdf | ext:odt | ext:rtf | ext:sxw | ext:psw | ext:csv',
+      },
+    ],
+  },
+  {
+    id: "9",
+    title: "PHP Info",
+    description: "Find exposed PHP info pages",
+    category: "BROWSER",
+    dorks: [
+      {
+        id: "9-1",
+        label: "PHP Info",
+        query: 'site:(site) intitle:"phpinfo()" | inurl:phpinfo | intitle:"php configuration" | inurl:"phpconf" | inurl:"php_config" | inurl:"phpinfo.php"',
       },
     ],
   }

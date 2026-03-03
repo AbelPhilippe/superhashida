@@ -1,9 +1,14 @@
+"use client"
+
+import { useState } from "react"
 import ModuleGrid from "../components/ModuleGrid"
 import SearchBar from "../components/SearchBar"
 import CategoryTabs from "../components/CategoryTabs"
 import MatrixBackground from "@/components/MatrixBackground"
 
 export default function Home() {
+  const [target, setTarget] = useState("")
+
   return (
     <>
       <MatrixBackground />
@@ -22,12 +27,15 @@ export default function Home() {
             [ THE • PHANTOM • EXTENSION ]
           </p>
 
-          <SearchBar />
+          <SearchBar onExecute={(value) => setTarget(value)} />
+
           <CategoryTabs />
-          <ModuleGrid />
+
+          <ModuleGrid target={target} />
 
         </div>
       </main>
     </>
   )
 }
+
