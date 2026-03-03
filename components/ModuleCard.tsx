@@ -18,7 +18,7 @@ export default function ModuleCard({
 
   function handleClick() {
     if (!target) {
-      alert("Digite um domínio primeiro.")
+      alert("Write a target domain first BROOOO!")
       return
     }
 

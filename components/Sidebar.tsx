@@ -13,7 +13,7 @@ export default function SearchBar({ onExecute }: Props) {
     <div className="mt-8 flex justify-center gap-4">
       <input
         type="text"
-        placeholder="Digite o domínio (ex: bugbounty.com)"
+        placeholder="Write a domain (ex: bugbounty.com)"
         value={value}
         onChange={(e) => setValue(e.target.value)}
         className="bg-black border border-zinc-700 px-4 py-2 rounded-lg text-white w-80"
