@@ -7,11 +7,10 @@ export default function CategoryTabs() {
   
   const tabs = [
     "All Modules",
-    "Google Dorks",
+    "Browser",
     "Recon & Subdomains",
     "Archives & History",
     "OSINT & Intelligence",
-    "Specific Files",
   ]
 
   return (

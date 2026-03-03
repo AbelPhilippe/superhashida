@@ -303,5 +303,31 @@ export const modules: Module[] = [
           query: 'site:(site) inurl:"/install" | inurl:"/setup" | inurl:"/config" | inurl:"/configuration" | inurl:"/init" | inurl:"/initialize" | inurl:"/db_init" | inurl:"/db_setup" | inurl:"/db_install"',
         },
       ],
+  },
+  {
+      id: "23",
+      title: "Exposed Grafana Dashboards",
+      description: "Find publicly accessible Grafana dashboards",
+      category: "BROWSER",
+      dorks: [
+        {
+          id: "23-1",
+          label: "Grafana Dashboards",
+          query: 'site:(site) inurl:"/grafana" | inurl:"/dashboard" | inurl:"/d/" | inurl:"/db/" | inurl:"/api/dashboards" | inurl:"/api/search"',
+        },
+      ],
+  },
+  {
+      id: "24",
+      title: "Exposed RabbitMQ Management Consoles",
+      description: "Find publicly accessible RabbitMQ management consoles",
+      category: "BROWSER",
+      dorks: [
+        {
+          id: "24-1",
+          label: "RabbitMQ Consoles",
+          query: 'site:(site) inurl:"/rabbitmq" | inurl:"/management" | inurl:"/admin" | inurl:"/console" | inurl:"/ui" | inurl:"/overview"',
+        },
+      ],
   }
 ]
