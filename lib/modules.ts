@@ -40,7 +40,7 @@ export const modules: Module[] = [
       {
         id: "2-1",
         label: "Env Files",
-        query: 'site:nasa.gov ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini',
+        query: 'site:(site) ext:xml | ext:conf | ext:cnf | ext:reg | ext:inf | ext:rdp | ext:cfg | ext:txt | ext:ora | ext:ini',
       },
     ],
   },
@@ -53,7 +53,7 @@ export const modules: Module[] = [
       {
         id: "3-1",
         label: "DB Files",
-        query: 'site:(site) ext:sql | ext:dbf | ext:mdb',
+        query: 'site:(site) ext:sql | ext:dbf | ext:mdb | inurl:db | inurl:database | inurl:db | inurl:sql | inurl:data | inurl:spreadsheets',
       },
     ],
   },
@@ -131,7 +131,7 @@ export const modules: Module[] = [
       {
         id: "9-1",
         label: "PHP Info",
-        query: 'site:(site) intitle:"phpinfo()" | inurl:phpinfo | intitle:"php configuration" | inurl:"phpconf" | inurl:"php_config" | inurl:"phpinfo.php"',
+        query: 'site:(site) intitle:"phpinfo()" | inurl:phpinfo | intitle:"php configuration" | inurl:"phpconf" | inurl:"php_config" | inurl:"phpinfo.php" | inurl:"info.php" | inurl:"phpinfo" | inurl:"php_conf" | inurl:"php-config" | inurl: "mysql.php" | inurl: "pginfo.php"',
       },
     ],
   },
