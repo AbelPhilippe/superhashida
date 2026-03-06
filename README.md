@@ -1,3 +1,13 @@
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=00ffff&height=100&section=header">
+
+<img width="1792" height="1024" alt="image" src="https://github.com/user-attachments/assets/c98a1792-2858-4e38-b1ed-712216d512a7" />
+  
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=00ffff&height=100&section=footer">
+
+<p align="center"> <img width="501" height="606" alt="image" src="https://github.com/user-attachments/assets/e5cf7c84-3366-4624-ad40-fc1916e974c0" /></p>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=ff00ff&height=100&section=footer">
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
